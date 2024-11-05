@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resourceful</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Card Creator</h1>
+      <hr />
+      <div id="card-creator-container">
+        <input type="text" id="input-name" placeholder="Name" />
+        <input type="text" id="input-hp" placeholder="HP" />
+        <input type="text" id="input-element" placeholder="Type" />
+        <input type="text" id="input-move" placeholder="Move" />
+        <input type="text" id="input-description" placeholder="Description" />
+        <button id="add-button">Add a Card</button>
+        <button id="update-button" style="display: none">Update Card</button>
+      </div>
+      <div id="card-collection">
+        <h2>Card Collection</h2>
+        <ul id="card-list"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!-- fontawesome, lorempicsum, ionicons, google fonts -->

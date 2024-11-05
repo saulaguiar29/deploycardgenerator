@@ -1,0 +1,160 @@
+/* Reset and basic styling */
+/* Basic Reset and Font */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+/* Styling the Body */
+body {
+  background-color: #968e3a;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Container */
+#container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 90%;
+  background-color: #e0e2d7e5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Header */
+h1 {
+  color: #0c0c0c;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+hr {
+  border: 0;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #111111;
+  margin: 10px 0;
+}
+
+/* Card Creator Input Form */
+#card-creator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#card-creator-container input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #a6b370;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-button:hover {
+  background-color: #475018;
+}
+
+/* Card Collection */
+#card-collection {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#card-collection h2 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+  height: 375px;
+  width: 300px;
+  background-color: #f1f1e6;
+  border: 5px solid #eee458;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  color: #666;
+  /* margin-top: 175px; */
+  margin-bottom: 10px;
+}
+.card h5 {
+  font-size: 1.2rem;
+  color: #666;
+  /* margin-top: 175px; */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1;
+  color: #555;
+}
+
+#update-button {
+  background-color: #b5e9b6;
+  color: white;
+  padding: 2px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+#update-button:hover {
+  background-color: #45a049;
+}
+
+#delete-button {
+  background-color: #f7a6a0;
+  color: white;
+  padding: 2px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#delete-button:hover {
+  background-color: #da190b;
+}
