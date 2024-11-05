@@ -51,3 +51,4 @@ class PokemonDB:
        data = [pokemon_id]
        self.cursor.execute("DELETE From pokemons WHERE id = ?", data)
        self.connection.commit()
+    #    comment
