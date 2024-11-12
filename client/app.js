@@ -1,5 +1,10 @@
 console.log("connected");
 
+const apiUrl =
+  window.location.protocol === "file:"
+    ? "http://localhost:8080" // Local API server during development
+    : "https://your-production-api.com"; // Replace with the actual production API URL
+
 let cardCollection = document.getElementById("card-collection");
 
 function addCard(cardData) {
@@ -66,7 +71,8 @@ function confirmDelete(pokemon_id) {
 }
 
 function loadCardsFromServer() {
-  fetch("http://localhost:8080/pokemons").then(function (response) {
+  //fetch("http://localhost:8080/pokemons").then(function (response) {
+  fetch(`${apiUrl}/pokemons`).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
       let cards = data;
@@ -100,7 +106,8 @@ function addNewCard() {
   data += "&description=" + encodeURIComponent(inputCardDescription.value);
   // name=Tatsu&review=Best%20Flying%20Coaster
   //send new review value to the serer
-  fetch("http://localhost:8080/pokemons", {
+  //fetch("http://localhost:8080/pokemons", {
+  fetch(`${apiUrl}/pokemons`, {
     method: "POST",
     body: data,
     headers: {
@@ -126,7 +133,8 @@ function updateCard(pokemon_id) {
     move
   )}&description=${encodeURIComponent(description)}`;
 
-  fetch(`http://localhost:8080/pokemons/${pokemon_id}`, {
+  //fetch(`http://localhost:8080/pokemons/${pokemon_id}`, {
+  fetch(`${apiUrl}/pokemons/${pokemon_id}`, {
     method: "PUT",
     body: data,
     headers: {
@@ -140,7 +148,8 @@ function updateCard(pokemon_id) {
 
 // Delete a Pokémon card
 function deleteCard(pokemon_id) {
-  fetch(`http://localhost:8080/pokemons/${pokemon_id}`, {
+  //fetch(`http://localhost:8080/pokemons/${pokemon_id}`, {
+  fetch(`${apiUrl}/pokemons/${pokemon_id}`, {
     method: "DELETE",
   }).then((response) => {
     console.log(`Card ${pokemon_id} deleted!`, response);
