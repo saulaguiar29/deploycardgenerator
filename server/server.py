@@ -87,7 +87,7 @@ def delete_pokemon(pokemon_id):
 
 def run():
     app.run(port=8080, host='0.0.0.0')
-
+#host = '0.0.0.0'
 if __name__ == "__main__":
     run()  
     # comment
